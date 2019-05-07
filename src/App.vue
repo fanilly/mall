@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <div style="height: 1rem; background-color: rgb(255,168,0);position: fixed;width: 100%;z-index: 999999;" @click="handleGoBack"><</div> -->
+    <transition name="fade">
+      <keep-alive v-if="$route.meta.keepAlive">
+        <router-view class="child-view" />
+      </keep-alive>
+      <router-view v-if="!$route.meta.keepAlive" class="child-view" />
+    </transition>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: 'App',
+  data() {
+    return {
+      transitionName: ''
+    };
+  },
+  methods:{
+    handleGoBack(){
+      this.$router.go(-1)
+    }
+  },
+  watch: {
   }
-}
-</script>
+};
 
-<style>
+</script>
+<style lang="less" scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff;
 }
+
 </style>
