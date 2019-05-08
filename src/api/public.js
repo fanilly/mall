@@ -1,10 +1,3 @@
-/**
- * @Author:      allenAugustine
- * @Email:       iallenaugustine@gmail.com  -  misterji0708@qq.com
- * @DateTime:    2018-05-17 10:40:03
- * @Description: 请求共用部分
- */
-
 import axios from 'axios';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www=form-urlencoded';
 const publicRequests = {

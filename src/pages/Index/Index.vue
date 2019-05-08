@@ -11,6 +11,7 @@
         <van-button type="info">信息按钮</van-button>
         <van-button type="warning">警告按钮</van-button>
         <van-button type="danger">危险按钮</van-button>
+        <div class="test"></div>
     </div>
 </template>
 
@@ -63,5 +64,13 @@
 
     a {
         color: #42b983;
+    }
+
+    .test {
+        height: 50px;
+        width: 350px;
+        background-color: #333;
+        border-radius: 10px;
+
     }
 </style>

@@ -1,5 +1,5 @@
 const Storage = {
-    setStorage(name, value) {
+    set(name, value) {
         if (!name) return;
         if (typeof value !== 'string') {
             value = JSON.stringify(value);
@@ -7,12 +7,12 @@ const Storage = {
         window.localStorage.setItem(name, value);
     },
 
-    removeStorage(name) {
+    remove(name) {
         if (!name) return;
         return window.localStorage.removeItem(name);
     },
 
-    getStorage(name) {
+    get(name) {
         if (!name) return;
         return window.localStorage.getItem(name);
     }

@@ -36,6 +36,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── src                                       项目源文件
     ├── api                                              放置项目请求
     ├── assets                                           图片资源
+    ├── components                                       公共组件
     ├── pages                                            路由页面
     ├── router                                           路由配置
     ├── store                                            vuex配置
