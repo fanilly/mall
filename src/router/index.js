@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '../pages/Index/Index.vue';
-import store from '../store/index.js';
-import { SET_USER_INFO } from '../store/mutation-type.js';
 
 
 Vue.use(Router);

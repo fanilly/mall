@@ -1,5 +1,4 @@
 import { SET_USER_INFO } from '../mutation-type.js';
-
 export default {
     state: {
 
@@ -9,7 +8,7 @@ export default {
 
     mutations: {
         [SET_USER_INFO](state, payload) {
-
+            console.log(state, payload)
         }
     },
 
